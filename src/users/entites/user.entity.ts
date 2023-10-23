@@ -5,6 +5,8 @@ export class UserEntity implements User {
   id!: string;
   email!: string;
   name!: string | null;
+  createdAt!: Date;
+  updatedAt!: Date;
 
   @Exclude()
   passwordHash!: string;
