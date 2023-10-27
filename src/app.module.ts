@@ -32,6 +32,7 @@ import { MoneyStacksModule } from './money-stacks/money-stacks.module';
       },
     }),
     MoneyStacksModule,
+    TransactionsModule,
   ],
   controllers: [],
   providers: [
