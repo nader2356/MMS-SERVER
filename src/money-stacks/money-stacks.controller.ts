@@ -11,6 +11,12 @@ export class MoneyStacksController {
   getMany(@GetCurrentUser('sub') userId: string) {
     return this.moneyStacksService.findManyByUserId(userId);
   }
+  
+  @Get()
+  getMany(@GetCurrentUser('sub') userId: string) {
+    return this.moneyStacksService.findManyByUserId(userId);
+  }
+
 
   @Get(':id')
   getOne(@Param('id') id: string) {

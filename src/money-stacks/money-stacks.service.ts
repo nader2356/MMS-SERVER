@@ -25,9 +25,6 @@ import {
         where: {
           userId,
         },
-        orderBy: {
-          createdAt: 'asc',
-        },
       });
     }
   
