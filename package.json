@@ -5,6 +5,10 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+  "prisma": {
+    "schema": "src/database/schema.prisma",
+    "seed": "ts-node src/database/seed/seed.ts"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
