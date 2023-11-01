@@ -11,6 +11,21 @@ export class TransactionsController {
     private readonly moneyStacksService: MoneyStacksService,
   ) {}
 
+  @Get()
+  getMany(
+    @GetCurrentUser('sub') userId: string,
+    @Query('moneyStackId') moneyStackId: string,
+  ) {
+    if (moneyStackId) {
+      return this.transactionsService.findManyByMoneyStackId(
+        moneyStackId,
+        userId,
+      );
+    }
+
+    return this.transactionsService.findManyByUserId(userId);
+  }
+
   @Get(':id')
   getOne(@Param('id') id: string) {
     return this.transactionsService.findOneById(id);
