@@ -26,7 +26,7 @@ import {
           userId,
         },
         orderBy: {
-          createdAt: 'desc',
+          createdAt: 'asc',
         },
       });
     }
